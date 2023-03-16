@@ -4,13 +4,15 @@
   "description": "Restaurant page for TOP",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --progress --mode=production",
+    "watch": "webpack --progress --watch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jakemcco/odin-restaurant.git"
   },
-  "author": "",
+  "author": "jakemcco",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jakemcco/odin-restaurant/issues"

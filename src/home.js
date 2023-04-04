@@ -15,7 +15,7 @@ function createHomeTab() {
     home.append(
         createParagraph("\"The real deal. No-nonsense ramen.\" -- RamenDojo99"),
         createParagraph("\"Best ramen on the block!\" -- Anonymous"),
-        createParagraph("\"The world's best rame, trust me.\" -- Shady Ramen Reviewer")
+        createParagraph("\"The world's best ramen, trust me.\" -- Shady Ramen Reviewer")
     )
 
     return home;

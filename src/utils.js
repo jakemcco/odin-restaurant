@@ -3,6 +3,7 @@
 function createParagraph (text) {
     const paragraph = document.createElement("p");
     paragraph.textContent = text;
+    paragraph.style.fontStyle = "italic";
     return paragraph;
 }
 

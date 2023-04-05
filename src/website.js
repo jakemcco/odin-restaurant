@@ -59,7 +59,6 @@ function createMain() {
                 {
                     id: 'main',
                     classList: 'main',
-                    textContent: 'PLACEHOLDER_MAIN'
                 });
 
     return main;
@@ -130,7 +129,7 @@ function initializeWebsite() {
     content.appendChild(createFooter());
 
     // Homepage stuff
-    const defaultTabName = 'home';
+    const defaultTabName = 'contact';
     const defaultTab = document.getElementsByClassName(`${defaultTabName}-tab`)[0];
     loadTab(defaultTabName);
     setActiveTab(defaultTab);

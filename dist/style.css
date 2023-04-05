@@ -1,13 +1,18 @@
 
 :root {
+    --creamy: rgb(237 233 229);
+    --dark-creamy:rgb(143, 134, 126);
+    --chocolatey: rgb(58 43 33 / 90%);
+    --dark-chocolate: rgba(37, 28, 21, 0.9);
+
     --font-color: var(--creamy);/* #eee; */
-    --font-color-dark: #aaa;
+    --font-color-dark: var(--dark-creamy); /* #aaa */
     --border-color: #222;
     --background-header:rgba(39, 39, 39, 0.8);
-    --background-light: rgba(0, 0, 0, 0.6);
+    --background-light: var(--dark-chocolate);/*rgba(0, 0, 0, 0.6); */
     --background-light-hover: rgba(99, 99, 99, 0.4);
     --background-dark: rgba(0, 0, 0, 0.8);
-    --creamy: rgb(237 233 229);
+
   }
 
 *,
@@ -129,7 +134,7 @@ nav {
     
     padding: 20px;
     gap: 20px;
-    background-color:rgb(58 43 33 / 90%);
+    background-color: var(--chocolatey);
     border-radius: 5px;
 }
 
@@ -182,4 +187,14 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
+}
+
+.fa-github {
+  font-size: 2rem;
+  color: var(--creamy);
+}
+
+.fa-github:hover {
+  color: var(--font-color-dark);
 }

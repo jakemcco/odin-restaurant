@@ -69,9 +69,22 @@ function createFooter() {
     const footer = Object.assign(document.createElement('footer'),
                 {
                     id: 'footer',
-                    classList: 'footer',
-                    textContent: 'PLACEHOLDER_FOOTER'
+                    classList: 'footer'
                 });
+    
+    const copyright = document.createElement("p");
+    copyright.textContent = `Copyright © ${new Date().getFullYear()} jakemcco`;
+    
+    const githubLink = document.createElement("a");
+    githubLink.href = "https://github.com/jakemcco";
+    
+    const githubIcon = document.createElement("i");
+    githubIcon.classList.add("fab");
+    githubIcon.classList.add("fa-github");
+    
+    githubLink.appendChild(githubIcon);
+    footer.appendChild(copyright);
+    footer.appendChild(githubLink);
 
     return footer;
 }

@@ -2,8 +2,8 @@ import loadHomeTab from './home';
 import loadMenuTab from './menu';
 import loadContactTab from './contact';
 
+/* Header with title and basic navbar */
 function createHeader() {
-
     const header = Object.assign(document.createElement('header'),
                 {
                     id: 'header',
@@ -24,6 +24,7 @@ function createHeader() {
     return header;
 }
 
+/* Basic tabbed nav bar for header */
 function createNavBar() {
     const navBar = document.createElement('nav');
     const homeTab = createTab('home');
@@ -37,6 +38,7 @@ function createNavBar() {
     return navBar;
 }
 
+/* Tabs (buttons) for each page */
 function createTab(tabName) {
     const formattedName = tabName.charAt(0).toUpperCase() + tabName.slice(1);
     const tab = Object.assign(document.createElement('button'),
@@ -54,6 +56,7 @@ function createTab(tabName) {
     return tab;
 }
 
+/* Core content section between header & footer */
 function createMain() {
     const main = Object.assign(document.createElement('main'),
                 {
@@ -64,6 +67,7 @@ function createMain() {
     return main;
 }
 
+/* Basic footer w/ github link */
 function createFooter() {
     const footer = Object.assign(document.createElement('footer'),
                 {
@@ -91,7 +95,6 @@ function createFooter() {
 /* Used for applying styles/animations */
 function setActiveTab(tab) {
     const buttons = document.querySelectorAll(".tab");
-    //const tab = document.querySelectorAll(`.${tabName}`);
 
     buttons.forEach((button) => {
       if (button !== tab) {
@@ -102,7 +105,7 @@ function setActiveTab(tab) {
     tab.classList.add("active");
 }
 
-/* Generic function to handle loading tabs */
+/* Generic function to handle loading tabs by name */
 function loadTab(requestedTab = 'home') {
     switch (requestedTab) {
         case 'home':
@@ -120,6 +123,7 @@ function loadTab(requestedTab = 'home') {
     };
 }
 
+/* To be called on site load */
 function initializeWebsite() {
     const content = document.getElementById("content");
 
@@ -129,7 +133,7 @@ function initializeWebsite() {
     content.appendChild(createFooter());
 
     // Homepage stuff
-    const defaultTabName = 'home';
+    const defaultTabName = 'menu';
     const defaultTab = document.getElementsByClassName(`${defaultTabName}-tab`)[0];
     loadTab(defaultTabName);
     setActiveTab(defaultTab);

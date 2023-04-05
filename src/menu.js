@@ -61,7 +61,7 @@ function createMenuCard(dish) {
     return menuCard;
 }
 
-function createMenuGrid() {
+function createMenuTab() {
     
     const menuGrid = Object.assign(document.createElement('div'),
     {
@@ -71,13 +71,6 @@ function createMenuGrid() {
     dishList.forEach(dish => menuGrid.appendChild(createMenuCard(dish)));
 
     return menuGrid;
-}
-
-function createMenuTab() {
-    const menu = document.createElement("div");
-    menu.classList.add("menu");
-    menu.appendChild(createMenuGrid());
-    return menu;
 }
 
 function loadMenuTab() {

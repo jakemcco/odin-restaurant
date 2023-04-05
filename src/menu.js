@@ -22,7 +22,7 @@ class Dish {
 
 // Define our dishes
 //TODO: add content
-const dish1 = new Dish();
+const dish1 = new Dish('Nongshim Shin Ramyun', './images/nongshim-shin-ramyun.jpg','Beef, wheat noodles, sesame seeds, chili pepper, chives, green onion, shimeji mushrooms, bean sprout kimchi, cabbage kimchi, raw egg yolk, spicy powder, sugar, miso paste');
 const dish2 = new Dish();
 const dish3 = new Dish();
 const dish4 = new Dish();
@@ -36,22 +36,22 @@ function createMenuCard(dish) {
                     classList: 'menu-card'
                     })
     
-    const title = Object.assign(document.createElement('p'),
+    const title = Object.assign(document.createElement('div'),
                     {
-                    classList: 'dish-title',
+                    classList: 'card-title',
                     textContent: `${dish.name}`
                     })
 
     const image = Object.assign(document.createElement('img'),
                     {
-                    classList: 'dish-img',
+                    classList: 'card-img',
                     src: `${dish.image}`,
                     alt: `${dish.name} image`,
                     })
 
     const ingredients = Object.assign(document.createElement('p'),
                     {
-                    classList: 'dish-ingredients',
+                    classList: 'card-ingredients',
                     textContent: `${dish.ingredients}`
                     })
     

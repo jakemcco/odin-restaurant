@@ -18,6 +18,11 @@
     margin: 0;
   }
 
+h1, h2, h3, h4, h5, h6, p {
+    padding:0;
+    margin: 0;
+}
+
 body {
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 1.6rem;
@@ -112,15 +117,13 @@ nav {
 
 .menu {
     width:100%;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
+    min-width: 360px;
 }
 
-
 .menu-grid {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     justify-items: center;
     align-items: center;
     
@@ -132,34 +135,42 @@ nav {
 
 .menu-card {
     height: 450px;
-    width: 400px;
+    width: 300px;
     padding: 20px;
-
     background-color: var(--creamy);
     color: black;
-    
-    /*
-    rgb(233 214 194);
-    rgb(116 69 41 / 90%);
-    rgb(92 124 79 / 90%);
-    */
     border-radius: 5px;
 
-    /* display: block;
-    text-align: center;
-    gap: 10px; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
-.dish-img {
-    height: 300px;
-    width: 300px;
+
+.card-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 10px;
+    height: 70px;
+}
+
+.card-img {
+    height: 250px;
+    width: 250px;
     border-style: solid;
     border-color: #000000ab;
     border-radius: 20px;
 }
+
+.card-ingredients {
+    padding: 10px;
+    font-size: 0.8rem;
+}
+
+
 
 /* Footer */
 .footer {

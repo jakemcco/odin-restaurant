@@ -1,14 +1,15 @@
 
 :root {
-    --font-color: #eee;
+    --font-color: var(--creamy);/* #eee; */
     --font-color-dark: #aaa;
     --border-color: #222;
     --background-header:rgba(39, 39, 39, 0.8);
     --background-light: rgba(0, 0, 0, 0.6);
     --background-light-hover: rgba(99, 99, 99, 0.4);
     --background-dark: rgba(0, 0, 0, 0.8);
+    --creamy: rgb(237 233 229);
   }
-  
+
 *,
 *::before,
 *::after {
@@ -45,7 +46,6 @@ button {
     height: 100vh;
 }
 
-
 /* Header */
 .header {
     display: flex;
@@ -61,7 +61,6 @@ button {
 .restaurant-name {
     font-size: 5rem;
     margin-bottom: 3rem;
-
 }
 
 nav {
@@ -102,7 +101,6 @@ nav {
     margin-top: 20%;
     width: 100%;
     background-color: var(--background-light);
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -112,6 +110,56 @@ nav {
     gap: 20px;
 }
 
+.menu {
+    width:100%;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    justify-items: center;
+    align-items: center;
+    
+    padding: 20px;
+    gap: 20px;
+    background-color:rgb(58 43 33 / 90%);
+    border-radius: 5px;
+}
+
+.menu-card {
+    height: 450px;
+    width: 400px;
+    padding: 20px;
+
+    background-color: var(--creamy);
+    color: black;
+    
+    /*
+    rgb(233 214 194);
+    rgb(116 69 41 / 90%);
+    rgb(92 124 79 / 90%);
+    */
+    border-radius: 5px;
+
+    /* display: block;
+    text-align: center;
+    gap: 10px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.dish-img {
+    height: 300px;
+    width: 300px;
+    border-style: solid;
+    border-color: #000000ab;
+    border-radius: 20px;
+}
 
 /* Footer */
 .footer {

@@ -5,7 +5,7 @@
  */
 
 class Dish {
-    constructor (name = 'Unknown Dish', image = './images/unknown-dish', ingredients = 'Water'){
+    constructor (name = 'Unknown Dish', image = './images/nongshim-shin-ramyun.jpg', ingredients = 'Ingredients'){
         this.name = name
         this.image = image
         this.ingredients = ingredients
@@ -33,7 +33,7 @@ function createMenuCard(dish) {
     //Object.assign allows us to set html attributes in one line, instead of having separate lines for item.classList.add(...) or item.onclick = ....
     const menuCard = Object.assign(document.createElement('div'),
                     {
-                    classList: 'card dish'
+                    classList: 'menu-card'
                     })
     
     const title = Object.assign(document.createElement('p'),
@@ -46,7 +46,7 @@ function createMenuCard(dish) {
                     {
                     classList: 'dish-img',
                     src: `${dish.image}`,
-                    alt: `${dish.name}`
+                    alt: `${dish.name} image`,
                     })
 
     const ingredients = Object.assign(document.createElement('p'),

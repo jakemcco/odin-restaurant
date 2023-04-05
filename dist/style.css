@@ -1,18 +1,20 @@
 
 :root {
+    /* Colors */
     --creamy: rgb(237 233 229);
     --dark-creamy:rgb(143, 134, 126);
-    --chocolatey: rgb(58 43 33 / 90%);
+    --chocolate: rgb(58 43 33 / 90%);
     --dark-chocolate: rgba(37, 28, 21, 0.9);
+    --sage: rgb(66 80 63 / 77%);
 
-    --font-color: var(--creamy);/* #eee; */
-    --font-color-dark: var(--dark-creamy); /* #aaa */
-    --border-color: #222;
-    --background-header:rgba(39, 39, 39, 0.8);
-    --background-light: var(--dark-chocolate);/*rgba(0, 0, 0, 0.6); */
-    --background-light-hover: rgba(99, 99, 99, 0.4);
+    --font-color-light: var(--creamy);
+    --font-color-dark: var(--dark-creamy);
+    --background-light: var(--dark-chocolate);
     --background-dark: rgba(0, 0, 0, 0.8);
-
+    --border-color: #222;
+    
+    /* Fonts */
+    --poppins: "Poppins", sans-serif;
   }
 
 *,
@@ -29,9 +31,9 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 body {
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: var(--poppins);
     font-size: 1.6rem;
-    color: var(--font-color);
+    color: var(--font-color-light);
     background-image: url('images/background.webp');
     background-attachment: fixed;
     background-position: center;
@@ -88,7 +90,7 @@ nav {
 }
 
 .header .btn.active{
-    border-bottom: 2px solid var(--font-color);
+    border-bottom: 2px solid var(--font-color-light);
 }
 
 .header .btn:hover {
@@ -108,16 +110,14 @@ nav {
 }
 
 .home {
-    margin-top: 20%;
-    width: 100%;
-    background-color: var(--background-light);
+    margin-top: 5%;
+    background-color: var(--sage);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    gap: 20px;
+    padding: 20px;
+    gap: 40px;
 }
 
 .menu {
@@ -134,7 +134,7 @@ nav {
     
     padding: 20px;
     gap: 20px;
-    background-color: var(--chocolatey);
+    background-color: var(--dark-chocolate);
     border-radius: 5px;
 }
 

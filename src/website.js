@@ -133,7 +133,7 @@ function initializeWebsite() {
     content.appendChild(createFooter());
 
     // Homepage stuff
-    const defaultTabName = 'menu';
+    const defaultTabName = 'home';
     const defaultTab = document.getElementsByClassName(`${defaultTabName}-tab`)[0];
     loadTab(defaultTabName);
     setActiveTab(defaultTab);

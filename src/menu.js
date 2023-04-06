@@ -21,11 +21,13 @@ class Dish {
 }
 
 // Define our dishes
-//TODO: add content
-const dish1 = new Dish('Nongshim Shin Ramyun', './images/nongshim-shin-ramyun.jpg','Beef, wheat noodles, sesame seeds, chili pepper, chives, green onion, shimeji mushrooms, bean sprout kimchi, cabbage kimchi, raw egg yolk, spicy powder, sugar, miso paste');
-const dish2 = new Dish();
-const dish3 = new Dish();
-const dish4 = new Dish();
+const dish1 = new Dish('Nongshim Shin Ramyun', './images/nongshim-shin-ramyun.jpg','Beef, wheat noodles, sesame seeds, chili pepper, chives, green onion, mushrooms, bean sprout kimchi, egg, sugar, miso');
+
+const dish2 = new Dish('Paitan Miso Ramen', './images/paitan-miso-ramen.jpg','Ajitama, smoked chashu, negi, togarashi, egg, green onions, garlic, spicy powder, miso');
+
+const dish3 = new Dish('Shio Lemon Ramen', './images/shio-lemon-ramen.webp', 'Shio lemon, tare, niboshi, smoked pear, chicken w/ duck chintan, shallots, egg, chives, sichuan pepper, yellow noodles');
+
+const dish4 = new Dish('Garlic Chili Tonkotsu Ramen', './images/bg-chili-tonkotsu-ramen.jpg', 'Egg, black garlic, pork belly, eel, chili oil, sesame seeds, green onion, shitake mushrooms, egg noodle');
 
 const dishList = [dish1, dish2, dish3, dish4];
 

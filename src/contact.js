@@ -5,20 +5,36 @@
  * Email
  */
 
-import createParagraph from "./utils";
-
 function createContactTab () {
 
     const contact = document.createElement("div");
     contact.classList.add("contact");
 
-    contact.append(
-        createParagraph("Phone:  (123) 456-7890"),
-        createParagraph("Email:  info@cozyramen.com"),
-        createParagraph("Address:  8080 Easy St. Cincinnati, OH"),
-        createParagraph("Hours:  Mon-Fri: 10am-10pm"),
-        createParagraph("Sat-Sun:  11am - 8pm")
-    )
+    const contactInfo = document.createElement("div");
+    contactInfo.classList.add("contact-info");
+
+    contactInfo.innerHTML = `
+        <div class="address info-box">
+            <i class="fas fa-map-marker-alt"></i>
+            <p> 8080 Easy St.<br />Cincinnati, OH 45202 </p>
+        </div>
+        <div class="hours info-box">
+            <i class="fas fa-clock"></i>
+            <p> Mon-Fri: 10am-10pm<br/> Sat-Sun: 10am-8pm </p>
+        </div>
+        <div class="phone info-box">
+            <i class="fas fa-phone fa-flip-horizontal"></i>
+            <p> (123) 456-7890 </p>
+        </div>`;
+
+    contact.appendChild(contactInfo);
+    // contact.append(
+    //     createParagraph("Phone:  (123) 456-7890"),
+    //     createParagraph("Email:  info@cozyramen.com"),
+    //     createParagraph("Address:  8080 Easy St. Cincinnati, OH"),
+    //     createParagraph("Hours:  Mon-Fri: 10am-10pm"),
+    //     createParagraph("Sat-Sun:  11am - 8pm")
+    // )
 
     const gMap = Object.assign(document.createElement('iframe'),
                     {

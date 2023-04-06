@@ -11,7 +11,7 @@ function createHomeTab() {
 
     const home = document.createElement("div");
     home.classList.add("home");
-
+    
     home.append(
         createParagraph("\"The real deal. No-nonsense ramen.\" -- RamenDojo99"),
         createParagraph("\"Best ramen on the block!\" -- Anonymous"),
